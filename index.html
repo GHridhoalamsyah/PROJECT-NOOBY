@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN MAIN JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <input type="text" placeholder="username" id="username">
+        <input type="password" placeholder="password" id="password">
+        <button onclick="onlogin()">LOGIN</button>
+        <br>
+
+        <h1 id="admin">LOGIN SEBAGAI ADMIN</h1>
+        <H1 id="userbiasa">LOGIN USER BIASA</H1>
+    </div>
+
+
+
+ <script>
+    
+    let usernameinput = document.getElementById("username")
+    let passwordinput = document.getElementById("password")
+    let admin = document.getElementById("admin")
+        admin.style.display = "none"
+    let userbiasa = document.getElementById("userbiasa")
+        userbiasa.style.display = "none"
+
+
+    function onlogin(){
+        console.info(usernameinput.value)
+        console.info(passwordinput.value)
+
+        if (usernameinput.value === "admin" && passwordinput.value === "admin123") {
+            alert("anda login sebagai admin")
+            admin.style.display ="block"
+            userbiasa.style.display = "none"
+        } else {
+            alert("anda login sebagai user biasa")
+            userbiasa.style.display = "block"
+            admin.style.display = "none"
+        }
+    }
+
+
+
+
+    
+
+ </script>  
+</body>
+</html>
